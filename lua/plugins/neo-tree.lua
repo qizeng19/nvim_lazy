@@ -3,7 +3,7 @@
 
 return {
 	"nvim-neo-tree/neo-tree.nvim",
-    lazy = false,
+	lazy = false,
 	dependencies = {
 		{ "nvim-lua/plenary.nvim" },
 		{ "nvim-tree/nvim-web-devicons" },
@@ -17,8 +17,8 @@ return {
 			{ noremap = true, silent = true, desc = "neo-tree toggle" },
 		}
 	},
-	config = function ()
-        require("neo-tree").setup({
+	config = function()
+		require("neo-tree").setup({
 			source_selector = {
 				winbar = false,
 				statusline = false,
@@ -129,13 +129,13 @@ return {
 						right_padding = 1,
 						--max_width = 60,
 						content = {
-							{ "name", zindex = 10 },
+							{ "name",        zindex = 10 },
 							{
 								"symlink_target",
 								zindex = 10,
 								highlight = "NeoTreeSymbolicLinkTarget",
 							},
-							{ "clipboard", zindex = 10 },
+							{ "clipboard",   zindex = 10 },
 							{ "diagnostics", errors_only = true, zindex = 20, align = "right" },
 						},
 					},
@@ -159,11 +159,11 @@ return {
 								zindex = 10,
 								highlight = "NeoTreeSymbolicLinkTarget",
 							},
-							{ "clipboard", zindex = 10 },
-							{ "bufnr", zindex = 10 },
-							{ "modified", zindex = 20, align = "right" },
+							{ "clipboard",   zindex = 10 },
+							{ "bufnr",       zindex = 10 },
+							{ "modified",    zindex = 20, align = "right" },
 							{ "diagnostics", zindex = 20, align = "right" },
-							{ "git_status", zindex = 20, align = "right" },
+							{ "git_status",  zindex = 20, align = "right" },
 						},
 					},
 				},
@@ -190,7 +190,7 @@ return {
 
 				follow_current_file = true, -- This will find and focus the file in the active buffer every
 				-- time the current file is changed while the tree is open.
-				group_empty_dirs = true, -- when true, empty folders will be grouped together
+				group_empty_dirs = true,    -- when true, empty folders will be grouped together
 				hijack_netrw_behavior = "open_current", -- netrw disabled, opening a directory opens neo-tree
 				-- in whatever position is specified in window.position
 				-- "open_current",  -- netrw disabled, opening a directory opens within the
@@ -240,5 +240,5 @@ return {
 				},
 			},
 		})
-    end
+	end
 }

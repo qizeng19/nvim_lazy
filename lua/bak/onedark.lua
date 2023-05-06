@@ -7,11 +7,11 @@ return {
 		require("onedark").setup({
 			style = "darker",
 			transparent = true,
-			term_colors = true, -- Change terminal color as per the selected theme style
-			ending_tildes = true, -- Show the end-of-buffer tildes. By default they are hidden
-			cmp_itemkind_reverse = false, -- reverse item kind highlights in cmp menu
+			term_colors = true,                                                         -- Change terminal color as per the selected theme style
+			ending_tildes = true,                                                       -- Show the end-of-buffer tildes. By default they are hidden
+			cmp_itemkind_reverse = false,                                               -- reverse item kind highlights in cmp menu
 			-- toggle theme style ---
-			toggle_style_key = nil, -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
+			toggle_style_key = nil,                                                     -- keybind to toggle theme style. Leave it nil to disable it, or set it to a string, for example "<leader>ts"
 			toggle_style_list = { "dark", "darker", "cool", "deep", "warm", "warmer", "light" }, -- List of styles to toggle between
 			-- Change code style ---
 			-- Options are italic, bold, underline, none
@@ -47,7 +47,7 @@ return {
 				DashboardFooter = { fg = "#e2b86b" },
 				NotifyBackground = { bg = "#5f668a" },
 				StatusLine = { bg = "NONE" },
-			}, -- Override highlight groups
+			},          -- Override highlight groups
 			diagnostics = {
 				darker = false, -- darker colors for diagnostic
 				undercurl = true, -- use undercurl instead of underline for diagnostics

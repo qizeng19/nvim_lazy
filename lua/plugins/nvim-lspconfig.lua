@@ -75,7 +75,7 @@ return {
             -- Mappings.
             -- See `:help vim.lsp.*` for documentation on any of the below functions
 
-          
+
 
             vim.keymap.set(
                 "n",
@@ -94,12 +94,12 @@ return {
 
         require("neodev").setup()
 
-        
+
 
 
         -- https://clangd.llvm.org/features.html
         capabilities.offsetEncoding = { "utf-16" } -- https://github.com/neovim/neovim/pull/16694
-        
+
 
         local servers = { 'pylsp', 'html', 'cssls', 'tsserver', 'eslint' }
         for _, lsp in ipairs(servers) do

@@ -1,11 +1,11 @@
 vim.opt.termguicolors = true
 return {
     lazy = false,
-event = 'VeryLazy',
+    event = 'VeryLazy',
     'akinsho/bufferline.nvim',
     version = "*",
-    dependencies = {'nvim-tree/nvim-web-devicons'},
-    config = function ()
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
         require('bufferline').setup({
             options = {
                 -- 使用 nvim 内置lsp
@@ -26,16 +26,16 @@ event = 'VeryLazy',
                     return " " .. icon .. count
                 end
             },
-        -- how to configure this plugin in details please see :h bufferline-configuration
+            -- how to configure this plugin in details please see :h bufferline-configuration
             highlights = {
- fill = {
-                fg = 'red',
-                bg = 'green',
-            },
-            background = {
-                fg = 'yellow',
-                bg = 'blue'
-            },
+                fill = {
+                    fg = 'red',
+                    bg = 'green',
+                },
+                background = {
+                    fg = 'yellow',
+                    bg = 'blue'
+                },
                 buffer_selected = {
                     fg = normal_fg,
                     bold = true,
