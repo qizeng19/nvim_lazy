@@ -1,5 +1,7 @@
 -- https://github.com/nvim-neo-tree/neo-tree.nvim
 -- ["<cr>"] = "open_drop",
+-- H 切换隐藏文件夹的显示
+-- ？显示帮助map
 
 return {
 	"nvim-neo-tree/neo-tree.nvim",
@@ -168,7 +170,7 @@ return {
 					},
 				},
 				filtered_items = {
-					visible = true, -- when true, they will just be displayed differently than normal items
+					visible = false, -- when true, they will just be displayed differently than normal items // 默认是否展示ignore的文件 通过大写的H切换
 					hide_dotfiles = true,
 					hide_gitignored = true,
 					hide_hidden = true, -- only works on Windows for hidden files/directories
@@ -188,10 +190,10 @@ return {
 					},
 				},
 
-				follow_current_file = true, -- This will find and focus the file in the active buffer every
+				follow_current_file = true, -- This will find and focus the file in the active buffer every // 跟随打开的文件
 				-- time the current file is changed while the tree is open.
 				group_empty_dirs = true,    -- when true, empty folders will be grouped together
-				hijack_netrw_behavior = "open_current", -- netrw disabled, opening a directory opens neo-tree
+				hijack_netrw_behavior = "open_current", -- netrw disabled, opening a directory opens neo-tree // 默认打开
 				-- in whatever position is specified in window.position
 				-- "open_current",  -- netrw disabled, opening a directory opens within the
 				-- window like netrw would, regardless of window.position
