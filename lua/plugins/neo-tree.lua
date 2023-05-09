@@ -13,7 +13,7 @@ return {
 	},
 	keys = {
 		{
-			"<leader>tt",
+			"<leader>e",
 			"<cmd>NeoTreeRevealToggle<CR>",
 			"n",
 			{ noremap = true, silent = true, desc = "neo-tree toggle" },
@@ -90,7 +90,7 @@ return {
 					nowait = true,
 				},
 				mappings = {
-					["<space>"] = { "toggle_node", nowait = true },
+					-- ["<space>"] = { "toggle_node", nowait = true }, // 不使用这个功能 不然会覆盖leader功能
 					["<2-LeftMouse>"] = "open",
 					["<esc>"] = "revert_preview",
 					["P"] = { "toggle_preview", config = { use_float = true } },

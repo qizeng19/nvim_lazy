@@ -101,7 +101,7 @@ return {
         capabilities.offsetEncoding = { "utf-16" } -- https://github.com/neovim/neovim/pull/16694
 
 
-        local servers = { 'pylsp', 'html', 'cssls', 'tsserver', 'eslint' }
+        local servers = { 'pylsp', 'html', 'cssls', 'tsserver', 'eslint_d' }
         for _, lsp in ipairs(servers) do
             require 'lspconfig'[lsp].setup {
                 capabilities = capabilities,
