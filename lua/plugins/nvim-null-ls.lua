@@ -7,8 +7,7 @@ return {
     local formatting = null_ls.builtins.formatting   -- to setup formatters
     local diagnostics = null_ls.builtins.diagnostics -- to setup linters
     -- to setup format on save
-    local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
+    local augroup = "LspFormatting"
     null_ls.setup({
       sources = {
         formatting.prettier.with({
