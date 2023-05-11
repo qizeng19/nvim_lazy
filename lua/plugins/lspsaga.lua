@@ -7,6 +7,9 @@ return {
     },
     config = function()
         require("lspsaga").setup({
+            definition = {
+                edit = "<CR>", -- 回车进入对应文件
+            },
             preview = {
                 lines_above = 0,
                 lines_below = 10,
@@ -64,9 +67,9 @@ return {
 
         vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
         vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
-        vim.keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>")
+        vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
         -- Use <C-t> to jump back
-        vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
+        -- vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
         vim.keymap.set("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
 
         vim.keymap.set("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
@@ -89,5 +92,8 @@ return {
         -- Call hierarchy
         vim.keymap.set("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
         vim.keymap.set("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
+
+        vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+        vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>")-- show definition, references
     end
 }

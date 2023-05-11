@@ -92,7 +92,7 @@ return {
             )
         end
 
-        require("neodev").setup()
+        -- require("neodev").setup()
 
 
 
@@ -101,7 +101,7 @@ return {
         capabilities.offsetEncoding = { "utf-16" } -- https://github.com/neovim/neovim/pull/16694
 
 
-        local servers = { 'pylsp', 'html', 'cssls', 'tsserver', 'eslint_d' }
+        local servers = { 'pylsp', 'html', 'cssls', 'tsserver', 'tailwindcss' }
         for _, lsp in ipairs(servers) do
             require 'lspconfig'[lsp].setup {
                 capabilities = capabilities,

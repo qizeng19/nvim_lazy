@@ -113,17 +113,38 @@ keymap.set("n", "<leader>bb", ":e #<CR>")                                       
 keymap.set("n", "<leader>qq", ":qa<CR>")                                           -- 退出
 
 keymap.set("n", "<leader>p", "\"0p")                                               -- 粘贴增强 选中再粘贴会把选中的那个放到register里面 所以使用leader p
+
 -- Paste over currently selected text without yanking it
 keymap.set("v", "p", '"_dP', { silent = true })
--- 重新载入配置文件
-vim.keymap.set("n", "<leader>vv", ":source ~/.config/nvim/init.lua<CR>")
+
 -- better indenting
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
-vim.keymap.set("n", "<", "v<g")
-vim.keymap.set("n", ">", "v>g")
-vim.keymap.set({ "n", "v", "o" }, "H", "^", { desc = "Use 'H' as '^'" })
-vim.keymap.set({ "n", "v", "o" }, "L", "$", { desc = "Use 'L' as '$'" })
+keymap.set("v", "<", "<gv")
+keymap.set("v", ">", ">gv")
+keymap.set("n", "<", "v<g")
+keymap.set("n", ">", "v>g")
+keymap.set({ "n", "v", "o" }, "H", "^", { desc = "Use 'H' as '^'" })
+keymap.set({ "n", "v", "o" }, "L", "$", { desc = "Use 'L' as '$'" })
 -- search
-vim.keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" }) -- 按esc取消高亮
-vim.keymap.set({ "n", "x" }, "gw", "*N", { desc = "Search word under cursor" })                    --- 和 输入* 一样的作用
+keymap.set({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" }) -- 按esc取消高亮
+keymap.set({ "n", "x" }, "gw", "*N", { desc = "Search word under cursor" })                    --- 和 输入* 一样的作用
+
+-- 折叠
+keymap.set("n", "-", "foldlevel('.') > 0 ? 'za' : 'zfip'", { noremap = true, silent = true, expr = true })
+keymap.set("v", "-", "zf", { noremap = true, silent = true })
+
+-- 切换是否wrap换行
+keymap.set("n", '\\w', "&wrap == 1 ? ':set nowrap<cr>' : ':set wrap<cr>'", { noremap = true, expr = true })
+
+-- 光标在行尾 行首跳转 学习这种写法 虽然不怎么使用
+-- https://github.com/yaocccc/nvim/blob/master/lua/keymap.lua
+-- keymap.set("n", "0", ':call v:lua.MagicMove()<cr>', { noremap = true, silent = true })
+-- function MagicMove()
+--     local first = 1
+--     local head = #vim.fn.getline('.') - #vim.fn.substitute(vim.fn.getline('.'), '^\\s*', '', 'G') + 1
+--     local before = vim.fn.col('.')
+--     vim.fn.execute(before == first and first ~= head and 'norm! ^' or 'norm! $')
+--     local after = vim.fn.col('.')
+--     if before == after then
+--         vim.fn.execute('norm! 0')
+--     end
+-- end
