@@ -14,10 +14,11 @@ return {
     },
     config = function()
         -- https://github.com/p00f/nvim-ts-rainbow/issues/81#issuecomment-1058124957
-        local rainbow = { "#CC8888", "#CCCC88", "#88CC88", "#88CCCC", "#8888CC", "#CC88CC" }
-        for i, c in ipairs(rainbow) do
-            vim.cmd(("hi rainbowcol%d guifg=%s"):format(i, c))
-        end
+
+        -- local rainbow = { "#CC8888", "#CCCC88", "#88CC88", "#88CCCC", "#8888CC", "#CC88CC" }
+        -- for i, c in ipairs(rainbow) do
+        --     vim.cmd(("hi rainbowcol%d guifg=%s"):format(i, c))
+        -- end
 
         for _, config in pairs(require("nvim-treesitter.parsers").get_parser_configs()) do
             config.install_info.url = config.install_info.url:gsub("https://github.com/",
