@@ -102,6 +102,7 @@ return {
 					with_text = true,
 					maxwidth = 50,
 					before = function(entry, vim_item)
+						-- 显示这个代码联想的来源
 						vim_item.menu = "[" .. string.upper(entry.source.name) .. "]"
 						if string.upper(entry.source.name) == "COPILOT" then
 							vim_item.kind = " Copilot"
