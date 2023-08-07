@@ -65,14 +65,14 @@ return {
             },
         })
 
-        vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
-        vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
-        vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+        -- vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
+        vim.keymap.set({ "n", "v" }, "<leader>ca", "<cmd>Lspsaga code_action<CR>") -- 自动补全
+        vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>") -- 以float的形式弹出来
         -- Use <C-t> to jump back
         -- vim.keymap.set("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
         vim.keymap.set("n", "gt", "<cmd>Lspsaga peek_type_definition<CR>")
 
-        vim.keymap.set("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
+        vim.keymap.set("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")-- 展示当前行的问题
         vim.keymap.set("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
         vim.keymap.set("n", "<leader>sw", "<cmd>Lspsaga show_workspace_diagnostics<CR>")
         vim.keymap.set("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")

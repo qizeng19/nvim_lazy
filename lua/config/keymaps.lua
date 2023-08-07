@@ -38,19 +38,20 @@ keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- window management
-keymap.set("n", "<leader>sh", "<C-w>v") -- 水平方向打开一个窗口
+keymap.set("n", "<leader>wv", "<C-w>s") -- 垂直打开一个窗口 
+keymap.set("n", "<leader>ww", "<C-w>v") --水平方向打开一个窗口 horizontally 
 -- keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally 和下面的冲突 平时很少用这个
 -- keymap.set("n", "<leader>sn", "<C-w>n") -- prev window
 -- keymap.set("n", "<leader>sp", "<C-w>p") -- next window
 
 -- 窗口 上下左右
-keymap.set('n', '<leader>sj', '<C-w>h') -- 光标移动到左边窗口
-keymap.set('n', '<leader>sk', '<C-w>l') -- 光标移动到右边窗口
--- keymap.set('n', '<leader>sk', '<C-w>k')
--- keymap.set('n', '<leader>sj', '<C-w>j')
+keymap.set('n', '<leader>wh', '<C-w>h') -- 光标移动到左边窗口
+keymap.set('n', '<leader>wl', '<C-w>l') -- 光标移动到右边窗口
+keymap.set('n', '<leader>wk', '<C-w>k')
+keymap.set('n', '<leader>wj', '<C-w>j')
 -- 多个窗口平均分
-keymap.set("n", "<leader>se", "<C-w>=")     -- make split windows equal width & height
-keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
+keymap.set("n", "<leader>we", "<C-w>=")     -- make split windows equal width & height
+keymap.set("n", "<leader>wx", ":close<CR>") -- close current split window
 
 -- 目前没什么用
 -- keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab

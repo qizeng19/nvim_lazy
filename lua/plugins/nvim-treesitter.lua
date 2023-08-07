@@ -35,6 +35,7 @@ return {
                 "javascript",
                 "markdown",
                 "markdown_inline",
+                "c_sharp",
             },
             sync_install = true,
             highlight = {
@@ -61,13 +62,13 @@ return {
             autotag = {
                 enable = _G.IsNotLargeFile(),
             },
-            rainbow = {
-                enable = _G.IsNotLargeFile(),
-                extended_mode = true,
-                max_file_lines = nil, -- Do not enable for files with more than n lines, int
-                colors = rainbow,     -- table of hex strings
-                termcolors = rainbow, --table of colour name strings
-            },
+            -- rainbow = {
+            --     enable = _G.IsNotLargeFile(),
+            --     extended_mode = true,
+            --     max_file_lines = nil, -- Do not enable for files with more than n lines, int
+            --     colors = rainbow,     -- table of hex strings
+            --     termcolors = rainbow, --table of colour name strings
+            -- },
             context_commentstring = {
                 enable = true,
             },

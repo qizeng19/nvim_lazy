@@ -13,7 +13,8 @@ return {
       sources = {
         formatting.prettier.with({
           condition = function(utils)
-            return utils.root_has_file(".prettierrc.js") -- change file extension if you use something else
+            -- return utils.root_has_file(".prettierrc.js") -- change file extension if you use something else
+            return utils.root_has_file("formatting.js") -- change file extension if you use something else
           end,
         }),
       },
