@@ -89,11 +89,10 @@ return {
         vim.keymap.set("n", "<leader>o", "<cmd>Lspsaga outline<CR>")
         vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 
-        -- Call hierarchy
-        vim.keymap.set("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
-        vim.keymap.set("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
+        -- Call hierarchy 不知道什么作用
+        -- vim.keymap.set("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
+        -- vim.keymap.set("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
 
-        vim.keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>")
         vim.keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>")-- show definition, references
     end
 }
